@@ -15,9 +15,8 @@ type Configer struct {
 		UDPAddr string `yaml:"udp_addr"`
 	} `yaml:"server"`
 	DNS struct {
-		Mode int      `yaml:"mode"`
-		IN   []string `yaml:"in"`
-		OUT  []string `yaml:"out"`
+		IN  []string `yaml:"in"`
+		OUT []string `yaml:"out"`
 	} `yaml:"dns"`
 	Rule []string `yaml:"rule"`
 }

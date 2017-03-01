@@ -57,10 +57,11 @@ func route(w dns.ResponseWriter, req *dns.Msg) {
 	for _, name := range conf.Rule {
 		if strings.HasSuffix("."+req.Question[0].Name, "."+name+".") {
 			for _, addr := range conf.DNS.OUT {
-				fmt.Printf("hit: %v = %v -> %v\n", req.Question[0].Name, name, addr)
+				fmt.Printf("hit: %v -> %v\n", name, addr)
 				if err = proxy(addr, w, req); err == nil {
 					return
 				}
+				fmt.Println("proxy hit error: ", err)
 			}
 			dns.HandleFailed(w, req)
 			return
@@ -72,6 +73,7 @@ func route(w dns.ResponseWriter, req *dns.Msg) {
 		if err = proxy(addr, w, req); err == nil {
 			return
 		}
+		fmt.Println("proxy default error: ", err)
 	}
 	dns.HandleFailed(w, req)
 }
@@ -93,7 +95,7 @@ func proxy(addr string, w dns.ResponseWriter, req *dns.Msg) error {
 	}
 	if isTransfer(req) {
 		if transport != "tcp" {
-			return errors.New("un support protocol")
+			return errors.New("unsupported protocol")
 		}
 		t := new(dns.Transfer)
 		c, err := t.In(req, addr)
