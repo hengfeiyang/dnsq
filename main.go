@@ -11,6 +11,7 @@ import (
 	"syscall"
 
 	"github.com/miekg/dns"
+	"github.com/safeie/daemon"
 )
 
 var conf *Configer
@@ -20,6 +21,10 @@ func main() {
 	conf, err = NewConfig("config.yml")
 	if err != nil {
 		panic(err)
+	}
+
+	if conf.Daemon {
+		daemon.Daemon(0, 0)
 	}
 
 	udpServer := &dns.Server{Addr: conf.Server.UDPAddr, Net: "udp"}

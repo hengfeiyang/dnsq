@@ -1,3 +1,6 @@
+daemon: true
+debug: true
+
 server:
   tcp_addr: ":53"
   udp_addr: ":53"

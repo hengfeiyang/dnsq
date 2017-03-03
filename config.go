@@ -10,6 +10,8 @@ import (
 
 // Configer 配置文件
 type Configer struct {
+	Daemon bool `yaml:"daemon"`
+	Debug  bool `yaml:"debug"`
 	Server struct {
 		TCPAddr string `yaml:"tcp_addr"`
 		UDPAddr string `yaml:"udp_addr"`
