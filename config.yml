@@ -14,6 +14,8 @@ dns:
     - "202.96.199.133:53"
 
 rule:
+  - net.cn
+  - com.cn
   - baidu.com
   - taobao.com
   - tmall.com
@@ -33,16 +35,18 @@ rule:
   - sogou.com
   - weiyun.com
   - weibo.com
-  - sina.com
   - sina.com.cn
   - sina.cn
+  - netease.com
   - 163.com
   - 126.net
+  - 127.net
   - yhd.com
   - youku.com
   - tudou.com
   - bilibili.com
-  - acfun.com
+  - acfun.tv
+  - acfun.cn
   - 56.com
   - ku6.com
   - pptv.com
@@ -93,6 +97,7 @@ rule:
   - uc.cn
   - xueqiu.com
   - xinhuanet.com
+  - news.cn
   - zhaopin.com
   - youdao.com
   - dianping.com
@@ -100,7 +105,6 @@ rule:
   - anjuke.com
   - 17173.com
   - hupu.com
-  - iciba.com
   - 10086.cn
   - 10010.com
   - 189.cn
@@ -125,6 +129,7 @@ rule:
   - huajiao.com
   - inke.cn
   - inke.tv
+  - xiaoka.tv
   - yizhibo.com
   - xiaokaxiu.com
   - miaopai.com
@@ -170,11 +175,26 @@ rule:
   - clouddn.com
   - qiniudns.com
   - alidns.com
+  - alicdn.com
+  - mmstat.com
   - kunlunca.com
   - kunlunar.com
   - kunlunno.com
   - kunlunea.com
   - yunjiasu-cdn.net
   - hichina.com
-  - net.cn
-  - com.cn
+  - gtimg.com
+  - qpic.cn
+  - bdstatic.com
+  - 360buyimg.com
+  - vipstatic.com
+  - qbox.me
+  - ykimg.com
+  - tdimg.com
+  - qiyipic.com
+  - itc.cn
+  - hdslb.com
+  - pdim.gs
+  - yystatic.com
+  - dwstatic.com
+  - aixifan.com
