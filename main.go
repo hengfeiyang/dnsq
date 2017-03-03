@@ -7,6 +7,8 @@ import (
 	"net"
 	"os"
 	"os/signal"
+	"path"
+	"path/filepath"
 	"strings"
 	"syscall"
 
@@ -17,8 +19,15 @@ import (
 var conf *Configer
 
 func main() {
+	if os.Getuid() != 0 {
+		fmt.Println("must run by root privileges")
+		os.Exit(1)
+	}
+
 	var err error
-	conf, err = NewConfig("config.yml")
+	root, err := filepath.Abs(os.Args[0])
+	root = path.Dir(root)
+	conf, err = NewConfig(root + "/config.yml")
 	if err != nil {
 		panic(err)
 	}

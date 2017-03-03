@@ -1,4 +1,4 @@
-daemon: true
+daemon: false
 debug: true
 
 server:
