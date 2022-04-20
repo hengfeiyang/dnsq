@@ -8,14 +8,17 @@ server:
 dns:
   in: 
     - "8.8.8.8:53"
-    - "8.8.4.4:53"
+    - "1.1.1.1:53"
   out:
     - "202.106.0.20:53"
-    - "202.96.199.133:53"
+    - "180.76.76.76:53"
 
 rule:
   - net.cn
   - com.cn
+  - edu.cn
+  - gov.cn
+  - org.cn
   - baidu.com
   - taobao.com
   - tmall.com
@@ -199,3 +202,8 @@ rule:
   - yystatic.com
   - dwstatic.com
   - aixifan.com
+  - ifanr.com
+  - 36kr.com
+  - juejin.cn
+  - segmentfault.com
+  - csdn.net
