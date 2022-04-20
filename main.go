@@ -12,8 +12,8 @@ import (
 	"strings"
 	"syscall"
 
+	"github.com/hengfeiyang/daemon"
 	"github.com/miekg/dns"
-	"github.com/safeie/daemon"
 )
 
 var conf *Configer
