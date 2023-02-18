@@ -1,10 +1,10 @@
 module github.com/hengfeiyang/dnsq
 
-go 1.17
+go 1.18
 
 require (
 	github.com/hengfeiyang/daemon v0.0.0-20170303035103-401451c96d13
-	github.com/miekg/dns v1.1.48
+	github.com/miekg/dns v1.1.50
 	gopkg.in/yaml.v2 v2.4.0
 )
 
